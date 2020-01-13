@@ -1,12 +1,11 @@
 {
-    "parserOptions": {
-        "ecmaVersion": 2018
-      },
-      "extends": ["airbnb", "prettier"],
-      "plugins":["prettier","react-hooks"],
-      "rules": {
-        "prettier/prettier": ["error"],
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
-      }
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "plugins": [
+    "react-hooks"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
 }

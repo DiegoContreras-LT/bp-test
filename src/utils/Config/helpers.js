@@ -1,1 +1,1 @@
-export const getDisplayName = WrapperComponent => WrapperComponent.displayName || WrapperComponent.name || 'Component';
+export const getDisplayName = WrapperComponent => WrapperComponent.displayName || WrapperComponent.name || 'Component'

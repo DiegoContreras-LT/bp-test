@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom'
 import Main from './Layout/main'
 
 export default class Screens extends Component {
-
   constructor (props) {
     super(props)
     this.state = {
@@ -40,7 +39,6 @@ export default class Screens extends Component {
   componentDidMount () {
     this.updateDimensions()
     window.addEventListener('resize', this.updateDimensions)
-
   }
 
   /**
@@ -50,8 +48,8 @@ export default class Screens extends Component {
     window.removeEventListener('resize', this.updateDimensions)
   }
 
-  isAuthenticated(){
-    return true;
+  isAuthenticated () {
+    return true
   }
 
   render () {
@@ -64,9 +62,7 @@ export default class Screens extends Component {
     } else if (window.innerWidth > this.tablet) {
       return (
         this.isAuthenticated()
-          ? <div>
-              <Main device={this.state.device} />
-            </div>
+          ? <div><Main device={this.state.device} /></div>
           : <Redirect to='/login' />
       )
     }

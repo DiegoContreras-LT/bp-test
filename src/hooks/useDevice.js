@@ -1,26 +1,23 @@
-import {useEffect, useState} from "react";
-import {breakPoints} from "../utils/Config";
+import { useEffect, useState } from 'react'
+import { breakPoints } from '../utils/Config'
 
 export const useDevice = () => {
-    const [device, setDevice] = useState(null);
+  const [device, setDevice] = useState(null)
 
-    const updateDimensions = () => {
-        let _device = 'desktop';
-        if (window.innerWidth <= breakPoints.DESKTOP)
-            _device = 'table';
+  const updateDimensions = () => {
+    let _device = 'desktop'
+    if (window.innerWidth <= breakPoints.DESKTOP) { _device = 'table' }
 
-        if (window.innerWidth <= breakPoints.TABLET)
-            _device = 'phone';
+    if (window.innerWidth <= breakPoints.TABLET) { _device = 'phone' }
 
-        setDevice(_device);
-    };
+    setDevice(_device)
+  }
 
-    useEffect(() => {
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
-        return () => window.removeEventListener('resize', updateDimensions)
-    }, []);
+  useEffect(() => {
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [])
 
-    return device;
-};
-
+  return device
+}
