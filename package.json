@@ -60,8 +60,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix",
-      "pre-push": "npm run test:all"
+      "pre-commit": "npm run lint:fix"
     }
   }
 }
